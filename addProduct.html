@@ -10,8 +10,8 @@
     <!--- basic page needs
    ================================================== -->
     <meta charset="utf-8">
-    <title>NWUSA</title>
-    <meta name="description" content="Home page for NWUSA LLC">
+    <title>NWUSA - Add Product</title>
+    <meta name="description" content="Add Products to the NWUSA App">
     <meta name="author" content="TGAND Technologies">
 
     <!-- mobile specific metas
@@ -48,7 +48,7 @@
 
 	   	<nav id="header-nav-wrap">
 			<ul class="header-main-nav">
-				<li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+				<li class="current"><a class="smoothscroll"  href="./index.html" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
 				<li><a class="smoothscroll"  href="#pricing" title="pricing">Join NWUSA</a></li>
 				<li><a class="smoothscroll"  href="#testimonials" title="testimonials">Testimonials</a></li>
@@ -74,9 +74,7 @@
                     <h3 data-aos="fade-up">Welcome to NWUSA!</h3>
 
                     <h1 data-aos="fade-up">
-                        Download The <br>
-                        New NWUSA App <br>
-                        Today!
+                        Upload a New <br>Product Below!
                     </h1>
 
                     <div class="buttons" data-aos="fade-up">
@@ -134,11 +132,107 @@
         <div class="row about-intro">
 
             <div class="col-four">
-                <h1 class="intro-header" data-aos="fade-up">About NWUSA</h1>
+                <h1 class="intro-header" data-aos="fade-up">Add a New Product</h1>
             </div>
             <div class="col-eight">
                 <p class="lead" data-aos="fade-up">
-                    NWUSA (Need Weed USA) is the safest way to discover 420 News, Updates Products and Events available in your area. NWUSA is only available to users who are +21 years of age and where purchase/ gifting of 420 items is legal. Download the app today and discover what's available near you!
+                    
+    <iframe
+    id="JotFormIFrame-222485443656058"
+    title="Submit a New Item"
+    onload="window.parent.scrollTo(0,0)"
+    allowtransparency="true"
+    allowfullscreen="true"
+    allow="geolocation; microphone; camera"
+    src="https://form.jotform.com/222485443656058"
+    frameborder="0"
+    style="
+    min-width: 100%;
+    height:539px;
+    border:none;"
+    scrolling="no"
+  >
+  </iframe>
+  <script type="text/javascript">
+    var ifr = document.getElementById("JotFormIFrame-222485443656058");
+    if (ifr) {
+      var src = ifr.src;
+      var iframeParams = [];
+      if (window.location.href && window.location.href.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
+      }
+      if (src && src.indexOf("?") > -1) {
+        iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
+        src = src.substr(0, src.indexOf("?"))
+      }
+      iframeParams.push("isIframeEmbed=1");
+      ifr.src = src + "?" + iframeParams.join('&');
+    }
+    window.handleIFrameMessage = function(e) {
+      if (typeof e.data === 'object') { return; }
+      var args = e.data.split(":");
+      if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+      if (!iframe) { return; }
+      switch (args[0]) {
+        case "scrollIntoView":
+          iframe.scrollIntoView();
+          break;
+        case "setHeight":
+          iframe.style.height = args[1] + "px";
+          break;
+        case "collapseErrorPage":
+          if (iframe.clientHeight > window.innerHeight) {
+            iframe.style.height = window.innerHeight + "px";
+          }
+          break;
+        case "reloadPage":
+          window.location.reload();
+          break;
+        case "loadScript":
+          if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
+          var src = args[1];
+          if (args.length > 3) {
+              src = args[1] + ':' + args[2];
+          }
+          var script = document.createElement('script');
+          script.src = src;
+          script.type = 'text/javascript';
+          document.body.appendChild(script);
+          break;
+        case "exitFullscreen":
+          if      (window.document.exitFullscreen)        window.document.exitFullscreen();
+          else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
+          else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
+          else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
+          else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
+          break;
+      }
+      var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+      if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+        var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+        iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+      }
+    };
+    window.isPermitted = function(originUrl, whitelisted_domains) {
+      var url = document.createElement('a');
+      url.href = originUrl;
+      var hostname = url.hostname;
+      var result = false;
+      if( typeof hostname !== 'undefined' ) {
+        whitelisted_domains.forEach(function(element) {
+            if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
+                result = true;
+            }
+        });
+        return result;
+      }
+    };
+    if (window.addEventListener) {
+      window.addEventListener("message", handleIFrameMessage, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onmessage", handleIFrameMessage);
+    }
+    </script>
                 </p>
             </div>                       
             
@@ -147,173 +241,6 @@
         
 
        
-
-        <div class="row about-how">
-          
-            <h1 class="intro-header" data-aos="fade-up">How The App Works?</h1>           
-
-            <div class="about-how-content" data-aos="fade-up">
-                <div class="about-how-steps block-1-2 block-tab-full group">
-
-                    <div class="bgrid step" data-item="1">
-                        <h3>Download & Sign-Up</h3>
-                        <p>Use the links on this page to download the NWUSA App for Android or iOS and create an account to get started. 
-                        </p> 
-                    </div>
-
-                    <div class="bgrid step" data-item="2">
-                        <h3>Placing an Order</h3>
-                        <p>Select a state and find a vendor with products available in your area. When you place an order you will get a text message to confirm.
-                        </p> 
-                    </div>               
-               
-                    <div class="bgrid step" data-item="3">
-                        <h3>Payment</h3>
-                        <p>NWUSA allows you to pay with Crypto, as well as using your bank or card for maximum flexibility.
-                        </p> 
-                    </div>
-
-                    <div class="bgrid step" data-item="4">
-                        <h3>Track Your Order</h3>
-                        <p>After your order is confirmed a driver is dispatched in your area and you will recieve a link to follow your driver along his route.  
-                        </p> 
-                    </div>  
-
-                </div>           
-           </div> <!-- end about-how-content -->
-
-        </div> <!-- end about-how -->
-
-        <div class="row about-bottom-image">
-
-           <img src="images/app-screens-1200.png" 
-                srcset="images/app-screens-600.png 600w, 
-                        images/app-screens-1200.png 1200w, 
-                        images/app-screens-2800.png 2800w" 
-                sizes="(max-width: 2800px) 100vw, 2800px"
-                alt="App Screenshots" data-aos="fade-up">
-
-        </div>  <!-- end about-bottom-image -->       
-        
-    </section> <!-- end about -->  
-
-    
-    <!-- NEW JOTFORM SECTION --------------------->
-
-    
-
-    <!-- pricing
-    ================================================== -->
-    <section id="pricing">
-        <div class="row pricing-content" data-aos="fade-up">
-
-            <!-- Jotform iFrame -->
-
-                    
-    
-            <iframe
-            id="JotFormIFrame-222756310940048"
-            title="Form"
-            onload="window.parent.scrollTo(0,0)"
-            allowtransparency="true"
-            allowfullscreen="true"
-            allow="geolocation; microphone; camera"
-            src="https://form.jotform.com/222756310940048"
-            frameborder="0"
-            style="
-            min-width: 100%;
-            height:539px;
-            border:none;"
-            scrolling="no"
-          >
-          </iframe>
-          <script type="text/javascript">
-            var ifr = document.getElementById("JotFormIFrame-222756310940048");
-            if (ifr) {
-              var src = ifr.src;
-              var iframeParams = [];
-              if (window.location.href && window.location.href.indexOf("?") > -1) {
-                iframeParams = iframeParams.concat(window.location.href.substr(window.location.href.indexOf("?") + 1).split('&'));
-              }
-              if (src && src.indexOf("?") > -1) {
-                iframeParams = iframeParams.concat(src.substr(src.indexOf("?") + 1).split("&"));
-                src = src.substr(0, src.indexOf("?"))
-              }
-              iframeParams.push("isIframeEmbed=1");
-              ifr.src = src + "?" + iframeParams.join('&');
-            }
-            window.handleIFrameMessage = function(e) {
-              if (typeof e.data === 'object') { return; }
-              var args = e.data.split(":");
-              if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
-              if (!iframe) { return; }
-              switch (args[0]) {
-                case "scrollIntoView":
-                  iframe.scrollIntoView();
-                  break;
-                case "setHeight":
-                  iframe.style.height = args[1] + "px";
-                  break;
-                case "collapseErrorPage":
-                  if (iframe.clientHeight > window.innerHeight) {
-                    iframe.style.height = window.innerHeight + "px";
-                  }
-                  break;
-                case "reloadPage":
-                  window.location.reload();
-                  break;
-                case "loadScript":
-                  if( !window.isPermitted(e.origin, ['jotform.com', 'jotform.pro']) ) { break; }
-                  var src = args[1];
-                  if (args.length > 3) {
-                      src = args[1] + ':' + args[2];
-                  }
-                  var script = document.createElement('script');
-                  script.src = src;
-                  script.type = 'text/javascript';
-                  document.body.appendChild(script);
-                  break;
-                case "exitFullscreen":
-                  if      (window.document.exitFullscreen)        window.document.exitFullscreen();
-                  else if (window.document.mozCancelFullScreen)   window.document.mozCancelFullScreen();
-                  else if (window.document.mozCancelFullscreen)   window.document.mozCancelFullScreen();
-                  else if (window.document.webkitExitFullscreen)  window.document.webkitExitFullscreen();
-                  else if (window.document.msExitFullscreen)      window.document.msExitFullscreen();
-                  break;
-              }
-              var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
-              if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
-                var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
-                iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
-              }
-            };
-            window.isPermitted = function(originUrl, whitelisted_domains) {
-              var url = document.createElement('a');
-              url.href = originUrl;
-              var hostname = url.hostname;
-              var result = false;
-              if( typeof hostname !== 'undefined' ) {
-                whitelisted_domains.forEach(function(element) {
-                    if( hostname.slice((-1 * element.length - 1)) === '.'.concat(element) ||  hostname === element ) {
-                        result = true;
-                    }
-                });
-                return result;
-              }
-            };
-            if (window.addEventListener) {
-              window.addEventListener("message", handleIFrameMessage, false);
-            } else if (window.attachEvent) {
-              window.attachEvent("onmessage", handleIFrameMessage);
-            }
-            </script>
-
-        </div> <!-- end pricing-content -->
-    </section> <!-- end pricing -->
-
-
-    
-    
 
     <!-- download
     ================================================== -->
@@ -394,7 +321,7 @@
                         <li><a href="#">Home</a></li>
                         <li><a href="#">About Us</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="./addProduct.html">Add Product</a></li>
+                        <li><a href="#">FAQ</a></li>
                         <li><a href="#">Terms</a></li>
                         <li><a href="#">Privacy Policy</a></li>
                     </ul>	      		
